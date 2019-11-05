@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
 export class BaseUrlService {
 
     // local host
-    // urlBase = 'http://localhost/api_myr_sgc/app';
+    urlBase = 'http://localhost/api_myr_sgc/app';
 
     // urlBase = 'https://meyro.000webhostapp.com/api/api_meyro_sgc/app/index.php';
 
     // allytech
-    urlBase = 'http://juntasmeyro.com.ar/API/api_meyro_sgc/app/index.php';
+    // urlBase = 'http://juntasmeyro.com.ar/API/api_meyro_sgc/app/index.php';
 
   constructor( public http: HttpClient ) {
    }
