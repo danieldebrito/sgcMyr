@@ -7,10 +7,10 @@ import { HttpClient} from '@angular/common/http';
 export class BaseUrlWebService {
 
   // localhost
-  // urlBaseWeb = 'http://localhost/api_myr_web/app';
+  urlBaseWeb = 'http://localhost/api_myr_web/app';
 
   // ALLYTECH
-  urlBaseWeb = 'http://juntasmeyro.com.ar/API/api_meyro_web/app/index.php';
+  // urlBaseWeb = 'http://juntasmeyro.com.ar/API/api_meyro_web/app/index.php';
 
   // hostinguer
   // urlBaseWeb = 'https://meyro.000webhostapp.com/api/api_meyro_web/app';
