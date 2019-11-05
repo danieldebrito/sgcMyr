@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sistema de Gestion de Calidad</title>
+
+  <!--allytech --> 
+<!--   <base href="/sgc/">  -->
+
+  <!-- local -->
+  <!--  -->
+  <base href="/">
+  
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>
+
+<!--
+para que funcione en allytech :
+
+(01) * las rutas de las imagenes deben ser :
+     * <img src="assets/logos/LOGO_300dpi_transparente.png" alt="" srcset="">
+
+(02) * <base href="/sgc/">
+
+(03) vambiar base url en los servicios    
+
+(04) * en las API
+     * pdo : $this->objetoPDO = new PDO('mysql:host=localhost;dbname=meyro_sgc;charset=utf8', 'uv025572', '9BHMPHNirj', array(PDO::ATTR_EMULATE_PREPARES => false,PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+     * index php : CORS  //->withHeader('Access-Control-Allow-Origin', 'http://juntasmeyro.com.ar')
+
+tareas : 
+
+12:28 17/07/2019 - gestion de mant correctivo y predectivos
+12:33 17/07/2019 - buscador optimizado
+12:33 17/07/2019 - modificar maquina que funcione bien
+12:33 17/07/2019 - hacer el doble router outlet
+12:47 17/07/2019 - hacer el canactivate
+
+-->

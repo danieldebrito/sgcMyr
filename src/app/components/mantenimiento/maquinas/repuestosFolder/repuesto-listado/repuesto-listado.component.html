@@ -1,0 +1,32 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID Repuesto</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Codigo</th>
+      <th scope="col">Detalle</th>
+      <th scope="col">Ficha</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let repuesto of repuestosList">
+    <tr>
+      <td><b>{{ repuesto.idRepuesto }}</b></td>
+      <td>{{ repuesto.marca }}</td>
+      <td>{{ repuesto.codigo }} </td>
+      <td>{{ repuesto.detalle }}</td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary"
+            (click)="mostrarDetalle(repuesto)">Ficha</button>
+        </div>
+      </td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-danger" (click)="eliminar(repuesto.idRepuesto)"
+            routerLink="/repuesto">Borrar</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

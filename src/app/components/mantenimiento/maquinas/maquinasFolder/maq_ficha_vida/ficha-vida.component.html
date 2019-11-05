@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="container pt-3">
+  <div class="row">
+
+    <div class="col-md-12 order-md-1">
+
+      <h4 class="mb-3">Ficha de Maquina - FAC: 011/002</h4>
+
+      <hr class="mb-4">
+
+      <form #formProducto="ngForm" id="form-producto1">
+
+        <div class="row">
+          <div class="col-sm-8 mb-8">
+            <div class="row">
+
+              <p><b> Numero de Maquina:</b> &nbsp; {{ maquina.idMaquina }} <br> <br>
+
+                <b> Detalle:</b> &nbsp; {{ maquina.detalle }} <br> <br>
+
+                <b> Sector:</b> &nbsp; {{ maquina.sector }} <br> <br>
+
+                <b> Marca:</b> &nbsp; {{ maquina.marca }} <br> <br>
+
+                <b>Estado: </b> {{ maquina.estado }} <br> <br>
+
+                <b> Fabricante:</b> <br> <br>
+
+                <b> Nombre:</b> &nbsp; {{ maquina.fabricanteNombre }} <br> <br>
+
+                <b> Dirección:</b> &nbsp; {{ maquina.fabricanteDireccion }} <br> <br>
+
+                <b> Teléfono:</b> &nbsp; {{ maquina.fabricanteTelefono }} <br> <br>
+
+                <b> Contacto:</b> &nbsp; {{ maquina.fabricanteContacto }} <br> <br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+    <hr class="mb-4">
+
+    <!-- //////////////////////tabla de especificaciones////////////////////////////////// -->
+
+    <div class="row">
+      <div class="col-sm-12 mb-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Especificaciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let esp of especifList">
+              <td>{{ esp.detalle }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- //////////////////////end tabla de especificaciones////////////////////////////////// -->
+    <hr class="mb-4">
+    </form>
+  </div>
+</div>

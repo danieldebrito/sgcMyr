@@ -1,0 +1,36 @@
+<main role="main">
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+
+        <!-- //////////////////////////////////////////card//////////////////////////////////////////  -->
+        <div class="col-md-4" *ngFor="let maquina of maquinasList">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">
+                <b>id Maquina:</b> {{ maquina.idMaquina }} <br>
+                <b>Detalle:</b> {{ maquina.detalle }} <br>
+                <!--  <img src="assets/maquinas/balancin.jpg" alt="Nature" class="responsive"><br> -->
+                <b>Marca:</b> {{ maquina.marca }} <br>
+                <b>Sector:</b> {{ maquina.sector }} <br>
+                <b>Estado:</b> {{ maquina.estado }}
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" (click)="mostrarDetalle(maquina)">Ficha</button>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-danger" (click)="eliminar(maquina.idMaquina)" routerLink="/maquinas">Borrar</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //////////////////////////////////////////end card//////////////////////////////////////////  -->
+
+      </div>
+    </div>
+  </div>
+
+</main>

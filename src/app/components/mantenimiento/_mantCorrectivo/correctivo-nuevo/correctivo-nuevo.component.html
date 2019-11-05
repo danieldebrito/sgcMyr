@@ -1,0 +1,69 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+      <h4 class="mb-3">Solicitud de Mantenimiento Correctivo - FAC: 029/001</h4>
+
+      <hr class="mb-4">
+
+      <form #formProducto="ngForm" (ngSubmit)="alta()" id="form-producto1">
+
+        <div class="row">
+          <div class="col-4 mb-4">
+            <label for="firstName">Nro de Maquina</label>
+            <input type="text" class="form-control" name="idMaquina" id="idMaquina" #idMaquina="ngModel"
+            [(ngModel)]="correctivo.idMaquina" placeholder="Nro de Maquina" required value="" required>
+
+            <label for="firstName">Solicitante</label>
+            <input type="text" class="form-control" name="solicitante" id="solicitante" #solicitante="ngModel"
+            [(ngModel)]="correctivo.solicitante" placeholder="Nombre de Solicitante" required value="" required>
+
+            <label for="firstName">Fecha Solicitud</label>
+            <input type="date" class="form-control" name="fechaSolicitud" id="fechaSolicitud" #fechaSolicitud="ngModel"
+            [(ngModel)]="correctivo.fechaSolicitud" placeholder="Fecha Solicitud" required value="" required>
+          </div>
+          <div class="col-sm-8 mb-8">
+            <label for="lastName">Mantenimiento a Realizar</label>
+            <textarea  rows="7" class="form-control" name="mantRealizar" id="mantRealizar" #mantRealizar="ngModel"
+            [(ngModel)]="correctivo.mantRealizar" placeholder="Descripción del mantenimiento a realizar" required value="" required></textarea>
+          </div>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="row">
+          <div class="col-4 mb-4">
+            <label for="firstName">Fecha Prevista de Reparacion</label>
+            <input type="date" class="form-control" name="fechaReparacion" id="fechaReparacion" #fechaReparacion="ngModel"
+            [(ngModel)]="correctivo.fechaReparacion" placeholder="Fecha Prevista de Reparacion" required value="" required>
+
+            <label for="firstName">Realizado por</label>
+            <input type="text" class="form-control" name="realizadoPor" id="realizadoPor" #realizadoPor="ngModel"
+            [(ngModel)]="correctivo.realizadoPor" placeholder="Realizado por : " required value="" required>
+
+            <label for="firstName">Fecha de Reparación</label>
+            <input type="date" class="form-control" name="fechaReparado" id="fechaReparado" #fechaReparado="ngModel"
+            [(ngModel)]="correctivo.fechaReparado" placeholder="Fecha de Reparacion" required value="" required>
+
+            <label for="firstName">Hora de Reparación</label>
+            <input type="time" class="form-control" name="horaReparado" id="horaReparado" #horaReparado="ngModel"
+            [(ngModel)]="correctivo.horaReparado" placeholder="Hora de Reparacion" required value="" required>
+          </div>
+          <div class="col-sm-8 mb-8">
+            <label for="lastName">Descripcion de Mantenimiento Realizado</label>
+            <textarea  rows="7" class="form-control" name="mantRealizado" id="mantRealizado" #mantRealizado="ngModel"
+            [(ngModel)]="correctivo.mantRealizado" placeholder="Descripción del mantenimiento a Realizado" required value="" required></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4 mb-4">
+            <button class="btn btn-outline-danger" type="submit">Guardar</button>
+          </div>
+        </div>
+
+        <hr class="mb-4">
+      </form>
+    </div>
+  </div>
+</div>

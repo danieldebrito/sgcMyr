@@ -1,0 +1,27 @@
+table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+table th, table td {
+  overflow: hidden;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.borrar {
+  width: 15%;
+  text-align: center;
+}
+
+.modificar {
+  width: 15%;
+  text-align: center;
+}
+
+.especificacion {
+  width: 100%;
+  text-align: left;
+}
+
+

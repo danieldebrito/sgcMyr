@@ -1,0 +1,78 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+      <h4 class="mb-3">Alta de Repuestos</h4>
+
+      <hr class="mb-4">
+
+      <!-- <form class="needs-validation" novalidate> -->
+      <form #formProducto="ngForm" (ngSubmit)="alta()" id="form-producto1">
+
+
+        <div class="row">
+          <div class="col-4 mb-4">
+            <label for="firstName">Codigo Original</label>
+            <input type="text" class="form-control" name="codigo" id="codigo" #nombre="ngModel"
+              [(ngModel)]="repuesto.codigo" placeholder="Codigo original / del proveedor" required value="">
+            <label for="firstName">Marca</label>
+            <input type="text" class="form-control" name="marca" id="marca" #nombre="ngModel"
+              [(ngModel)]="repuesto.marca" placeholder="Marca del repuesto" required value="">
+          </div>
+          <div class="col-sm-8 mb-8">
+            <label for="lastName">Detalles, Especificaciones Tecnicas</label>
+            <textarea class="form-control" name="detalle" id="detalle" #nombre="ngModel" [(ngModel)]="repuesto.detalle"
+              placeholder="Detalle del repuesto, medidas, etc..." required value="" rows="4"></textarea>
+          </div>
+        </div>
+
+        <h4 class="mb-3">Alta de Proveedores</h4>
+
+        <hr class="mb-4">
+
+        <div class="row">
+          <div class="col-sm-2 mb-2">
+            <label for="firstName">Nro. Proveedor</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Marca" value="" required>
+          </div>
+          <div class="col-sm-4 mb-4">
+            <label for="lastName">Proveedor Nombre</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Fabricante" value="" required>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="firstName">CUIT</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Marca" value="" required>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <br>
+            <button class="btn btn-danger btn-lg btn-block" type="submit" routerLink="/maquinas">Agregar
+              Proveedor</button>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-6 mb-6">
+            <label for="firstName">Dirección Proveedor</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Dirección" value="" required>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="lastName">Telefóno Proveedor</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Telefóno" value="" required>
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="lastName">Contacto</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Contacto" value="" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 mb-4">
+            <button class="btn btn-outline-danger" type="submit">Guardar</button>
+          </div>
+        </div>
+
+        <hr class="mb-4">
+      </form>
+    </div>
+  </div>
+</div>

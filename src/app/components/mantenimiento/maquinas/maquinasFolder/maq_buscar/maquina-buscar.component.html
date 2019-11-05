@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 order-md-1">
+      <h4 class="mb-3">Buscador de Maquina</h4>
+      <hr class="mb-4">
+
+      <form #formProducto="ngForm" (ngSubmit)="onSubmit()" id="form-producto1">
+
+          <div class="row">
+              <div class="col-xl-12 xl-12">
+                <div class="row">
+
+                  <div class="col-sm-5 mb-5">
+                    <label for="lastName">ID Maquina</label>
+                    <input type="text" class="form-control" name="idMaquina" id="idMaquina" #nombre="ngModel"
+                      [(ngModel)]="idMaquina" placeholder="ID de la maquina" value="" required>
+                  </div>
+
+                  <div class="col-sm-3 mb-3">
+                    <label for="lastName"></label>
+                    <button class="btn btn-danger btn-lg btn-block" type="submit">Buscar</button>
+                  </div>
+                </div>
+
+                <!--  //////////////////////////
+                  
+                  hacer formula de buscar que al encontrar redigija a la ficha de vida
+
+                  tratamiento si no encuentra id, hacer eso
+                  
+                  
+                  ///////////////////////////////////// -->
+    
+    
+              </div>
+  
+            </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+
+                  <div class="col-sm-7 mb-8">
+                    <label for="lastName">Detalle</label>
+                    <input type="text" class="form-control" name="detalle" id="detalle" #nombre="ngModel"
+                      [(ngModel)]="maquina.detalle" placeholder="Descripcion de maquina" value="" required>
+                  </div>
+
+
+
+-->

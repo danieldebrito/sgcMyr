@@ -1,0 +1,221 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 order-md-1">
+            <h4 class="mb-3"><b>Alta de Maquinas - FAC: 011/002</b></h4>
+            <hr class="mb-4">
+
+            <form [formGroup]="registroForm" (ngSubmit)="alta()" id="form-producto1">
+
+                <div class="row">
+                    <div class="col-sm-12 mb-12">
+                        <div class="row">
+
+                            <div class="col-2 mb-2">
+                                <label for="idMaquina">Numero</label>
+                                <input type="text" class="form-control" formControlName="idMaquina" name="idMaquina" id="idMaquina" (change)="buscar()" [(ngModel)]="maquina.idMaquina" placeholder="Nro de Maquina" value="maquina.idMaquina">
+                                <div *ngIf="idMaquina.errors?.required && idMaquina.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="idMaquina.errors?.minlength && idMaquina.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-7 mb-7">
+                                <label for="detalle">Detalle</label>
+                                <input type="text" class="form-control" formControlName="detalle" name="detalle" id="detalle" [(ngModel)]="maquina.detalle" placeholder="Descripcion de maquina" value="maquina.detalle" required>
+                                <div *ngIf="detalle.errors?.required && detalle.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="detalle.errors?.minlength && detalle.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 mb-3">
+                                <label for="sector">Sector</label>
+
+                                <select class="form-control" [(ngModel)]="maquina.sector" [ngModelOptions]="{standalone: true}">
+                                    <option value="" disabled>Seleccione el Sector</option>
+                                    <option value="Administracion">Administracion</option>
+                                    <option value="Balancines">Balancines</option>
+                                    <option value="Corcho y Goma">Corcho y Goma</option>
+                                    <option value="Depósito">Depósito</option>
+                                    <option value="Edificio">Edificio</option>
+                                    <option value="Envasado">Envasado</option>
+                                    <option value="Especiales">Especiales</option>
+                                    <option value="Expedición">Expedición</option>
+                                    <option value="Mantenimiento">Mantenimiento</option>
+                                    <option value="Metaloplastico">Metaloplastico</option>
+                                    <option value="Pintura / Serigrafía">Pintura / Serigrafía</option>
+                                    <option value="Prensas">Prensas</option>
+                                    <option value="Sacabocados">Sacabocados</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-4 mb-4">
+                                <label for="marca">Marca</label>
+                                <input type="text" class="form-control" formControlName="marca" id="marca" name="marca" [(ngModel)]="maquina.marca" placeholder="Marca" value="maquina.marca">
+                                <div *ngIf="marca.errors?.required && marca.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="marca.errors?.minlength && marca.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-8 mb-8">
+                                <label for="fabricanteNombre">Fabricante</label>
+                                <input type="text" class="form-control" formControlName="fabricanteNombre" id="fabricanteNombre" name="fabricanteNombre" [(ngModel)]="maquina.fabricanteNombre" placeholder="Fabricante de la Maquina" value="maquina.fabricanteNombre">
+                                <div *ngIf="fabricanteNombre.errors?.required && fabricanteNombre.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="fabricanteNombre.errors?.minlength && fabricanteNombre.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-6 mb-6">
+                                <label for="fabricanteDireccion">Dirección Fabricante</label>
+                                <input type="text" class="form-control" formControlName="fabricanteDireccion" name="fabricanteDireccion" id="fabricanteDireccion" [(ngModel)]="maquina.fabricanteDireccion" placeholder="Descripcion de maquina" value="maquina.fabricanteDireccion" required>
+                                <div *ngIf="fabricanteDireccion.errors?.required && fabricanteDireccion.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="fabricanteDireccion.errors?.minlength && fabricanteDireccion.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 mb-3">
+                                <label for="fabricanteTelefono">Fabricante Telefono</label>
+                                <input type="text" class="form-control" formControlName="fabricanteTelefono" name="fabricanteTelefono" id="fabricanteTelefono" [(ngModel)]="maquina.fabricanteTelefono" placeholder="Fabricante de la Maquina" value="maquina.fabricanteTelefono" required>
+                                <div *ngIf="fabricanteTelefono.errors?.required && fabricanteTelefono.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="fabricanteTelefono.errors?.minlength && fabricanteTelefono.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3 mb-3">
+                                <label for="fabricanteContacto">Fabricante Contacto</label>
+                                <input type="text" class="form-control" formControlName="fabricanteContacto" name="fabricanteContacto" id="fabricanteContacto" [(ngModel)]="maquina.fabricanteContacto" placeholder="Fabricante de la Maquina" value="maquina.fabricanteContacto">
+                                <div *ngIf="fabricanteContacto.errors?.required && fabricanteContacto.touched" class="text-danger">
+                                    Este campo es requerido.
+                                </div>
+                                <div *ngIf="fabricanteContacto.errors?.minlength && fabricanteContacto.touched" class="text-danger">
+                                    Por lo menos dos caracteres.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4 mb-4">
+                                <label for="estado">Estado</label>
+                                <select class="form-control" [(ngModel)]="maquina.estado" name="estado" [ngModelOptions]="{standalone: true}">
+                                    <option value="" disabled>Seleccione la Marca</option>
+                                    <option value="En Uso">En Uso</option>
+                                    <option value="A Reparar">A Reparar</option>
+                                    <option value="En Desuso">En Desuso</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-4 mb-4">
+                                <!--
+                                <label for="firstName">Imagen</label>
+                                <input type="file" name="urlImagen" id="urlImagen" #nombre="ngModel" [(ngModel)]="maquina.urlImagen"
+                                placeholder="urlImagen" value="" required>
+                                -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr class="mb-4">
+
+                <!-- ////////////////////////////// TABLA ESPECIFICACIONES //////////////////////////////////////////// -->
+                <form (ngSubmit)="altaEspecificacion()" id="form-producto2">
+
+                    <h5 class="mb-3"><b>Datos Técnicos :</b> </h5>
+
+                    <div class="row">
+
+                        <div class="col-sm-12 mb-12">
+                            <label for="especificacion">Especificacion:</label>
+                            <input type="text" class="form-control" id="especificacion" [(ngModel)]="especificacion.detalle" placeholder="Especificacion Tecnica" value="especificacion.detalle" [ngModelOptions]="{standalone: true}">
+                        </div>
+
+                    </div>
+
+                    <hr class="mb-4">
+
+                    <div class="row">
+
+                        <div class="col-sm-4 mb-4">
+                            <button class="btn btn-outline-danger" type="submit">Cargar Itém</button>
+                        </div>
+
+                    </div>
+
+                    <hr class="mb-4">
+
+                    <div class="row">
+
+                        <div class="col-sm-12 mb-12">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th class="especificacion" scope="col">Especificacion</th>
+                                        <th class="modificar" scope="col">Modificar</th>
+                                        <th class="borrar" scope="col">Borrar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let esp of especifList">
+                                        <td>{{ esp.detalle }}</td>
+                                        <td><button type="button" class="btn btn-sm btn-outline-primary">
+                                                <svg-icon src="../../../../../assets/icons/edit.svg"
+                                                    [svgStyle]="{ 'width.px':25 }">
+                                                </svg-icon>
+                                            </button></td>
+                                        <td><button (click)="borrar(esp.idEspecificacion)" type="button" class="btn btn-sm btn-outline-danger">
+                                                <svg-icon src="../../../../../assets/icons/trash-alt.svg"
+                                                    [svgStyle]="{ 'width.px':25 }">
+                                                </svg-icon>
+                                            </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+                <!-- //////////////////////end tabla de especificaciones////////////////////////////////// -->
+
+                <hr class="mb-4">
+
+                <div class="row">
+                    <div class="col-sm-4 mb-4" *ngIf="!registroForm.valid">
+                        <button type="button" class="btn btn-lg btn-danger" disabled>Guardar</button>
+                    </div>
+                    <div class="col-sm-4 mb-4" *ngIf="registroForm.valid">
+                        <button type="submit" class="btn btn-lg btn-danger">Guardar</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <hr class="mb-4">
+        </div>
+    </div>

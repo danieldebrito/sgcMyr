@@ -1,0 +1,20 @@
+<div class="container">
+
+
+    <form #formLogin="ngForm" (ngSubmit)="onSubmit()" id="form-login" class="form-signin">
+
+        <div id="centrador">
+            <img class="imagen mb-4" src="assets/logos/isologo_transp.png" alt="" width="72" height="72">
+        </div>
+        <h1 class="h3 mb-3 font-weight-normal">Por Favor Identifíquese</h1>
+
+        <label for="inputEmail">Usuario</label>
+        <input type="text" id="userName" name="userName: " #userName="ngModel" [(ngModel)]="login.userName" class="form-control" placeholder="Ingresa tu usuario" required autofocus>
+        <br>
+        <label for="fclave"> Contraseña :</label>
+        <input type="password" id="pass" name="pass: " #pass="ngModel" [(ngModel)]="login.pass" class="form-control" placeholder="Ingresa la clave" required>
+        <br>
+        <input class="btn btn-lg btn-danger btn-block" type="submit" value="Ingresá">
+    </form>
+
+</div>

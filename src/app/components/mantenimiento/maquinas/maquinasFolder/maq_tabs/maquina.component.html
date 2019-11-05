@@ -1,0 +1,39 @@
+<br>
+<div class="col-md-12">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pills-ficha-tab" data-toggle="pill" href="#pills-ficha" role="tab"
+        aria-controls="pills-ficha" aria-selected="true">Ficha de Maquina</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-home-tab" data-toggle="pill" routerLink="/repuesto" role="tab"
+        aria-controls="pills-home" aria-selected="false">Repuestos</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-correctivo-tab" data-toggle="pill" href="#pills-correctivo" routerLink="/maquinaCorrectivo" role="tab"
+        aria-controls="pills-correctivo" aria-selected="false">Mantenimiento Correctivo</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-preventivo-tab" data-toggle="pill" href="#pills-preventivo" role="tab"
+        aria-controls="pills-preventivo" aria-selected="false">Mantenimiento Preventivo</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" id="pills-home-tab" data-toggle="pill" routerLink="/listMaquinas" role="tab"
+        aria-controls="pills-home" aria-selected="false">Volver a Listado</a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-ficha" role="tabpanel" aria-labelledby="pills-ficha-tab">
+      <app-ficha-vida></app-ficha-vida>
+    </div>
+
+    <div class="tab-pane fade" id="pills-preventivo" role="tabpanel" aria-labelledby="pills-preventivo-tab">
+      <app-mant-preventivo></app-mant-preventivo>
+    </div>
+  </div>
+</div>
