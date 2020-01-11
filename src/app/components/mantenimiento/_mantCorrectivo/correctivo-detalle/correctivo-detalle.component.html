@@ -6,20 +6,26 @@
 
       <hr class="mb-4">
 
+
       <form class="needs-validation" novalidate>
 
         <div class="row">
           <div class="col-4 mb-4">
-            <label for="firstName">Nro de Maquina</label>
-            <input type="date" class="form-control" id="firstName" placeholder="Nro de Maquina" value="" required>
+            <label for="firstName">Nro de Maquina : </label> <strong>{{ correctivo.idMaquina }}</strong> <br>
+            <label for="firstName">Fecha de Solicitud : </label>
+            <input type="number" class="form-control" id="firstName" placeholder="Nro de Maquina"
+              value="{{ correctivo.fechaSolicitud }}" required>
             <label for="firstName">Solicitante</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Apellido y Nombre" value="" required>
+            <input type="text" class="form-control" id="firstName" placeholder="Apellido y Nombre"
+              value="{{ correctivo.solicitante }}" required>
             <label for="firstName">Fecha Estimada de Reparación</label>
-            <input type="date" class="form-control" id="firstName" placeholder="dd/mm/aaaa" value="" required>
+            <input type="date" class="form-control" id="firstName" placeholder="dd/mm/aaaa"
+              value="{{ correctivo.fechaReparacion }}" required>
           </div>
           <div class="col-sm-8 mb-8">
             <label for="lastName">Mantenimiento a Realizar</label>
-            <textarea class="form-control" id="comments" name="comments" placeholder="" rows="7"></textarea>
+            <textarea class="form-control" id="comments" name="comments" value="{{ correctivo.mantRealizar }}"
+              rows="7"></textarea>
           </div>
         </div>
 
@@ -28,17 +34,22 @@
         <div class="row">
           <div class="col-4 mb-4">
             <label for="firstName">Fecha de Realizacion</label>
-            <input type="date" class="form-control" id="firstName" placeholder="dd/mm/aaaa" value="" required>
+            <input type="date" class="form-control" id="firstName" placeholder="dd/mm/aaaa"
+              value="{{ correctivo.fechaRealizacion }}" required>
             <label for="firstName">Realizado por</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Apellido y Nombre" value="" required>
+            <input type="text" class="form-control" id="firstName" placeholder="Apellido y Nombre"
+              value="{{ correctivo.realizadoPor }}" required>
             <label for="firstName">Fecha de Reparación</label>
-            <input type="date" class="form-control" id="firstName" placeholder="dd/mm/aaaa" value="" required>
+            <input type="date" class="form-control" id="firstName" placeholder="dd/mm/aaaa"
+              value="{{ correctivo.fechaReparado }}" required>
             <label for="firstName">Hora de Reparación</label>
-            <input type="time" class="form-control" id="firstName" placeholder="hh:mm" value="" required>
+            <input type="time" class="form-control" id="firstName" placeholder="hh:mm"
+              value="{{ correctivo.horaReparado }}" required>
           </div>
           <div class="col-sm-8 mb-8">
             <label for="lastName">Descripcion de Mantenimiento Realizado</label>
-            <textarea class="form-control" id="comments" name="comments" placeholder="" rows="10"></textarea>
+            <textarea class="form-control" id="comments" name="comments" value="{{ correctivo.mantRealizado }}"
+              rows="10"></textarea>
           </div>
         </div>
         <hr class="mb-4">
