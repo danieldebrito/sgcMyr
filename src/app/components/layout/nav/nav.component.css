@@ -8,3 +8,7 @@
     font-weight: bold;
     background-color: red;
 }
+
+.nav-link{
+        color: black !important;
+}
