@@ -7,6 +7,7 @@ import { EspecificacionService } from 'src/app/services/maquinas/especificacion.
 import { NavFooterService } from 'src/app/services/cambiaRouter/nav-footer.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { SectoresService } from 'src/app/services/sectores/sectores.service';
 
 @Component({
   selector: 'app-nueva-maquina',
@@ -30,6 +31,7 @@ export class NuevaMaquinaComponent implements OnInit {
     private maquinaService: MaquinaService,
     public navFootServ: NavFooterService,
     public EspecifService: EspecificacionService,
+    public sectoresService: SectoresService,
     private router: Router,
     private toastr: ToastrService,
     private builder: FormBuilder) {
@@ -114,6 +116,15 @@ export class NuevaMaquinaComponent implements OnInit {
   public traerID(id) {
     this.maquinaService.traerUna(id).subscribe(response => {
       this.maquina = response;
+    },
+      error => {
+        console.error(error);
+      });
+  }
+
+  public traerSectorID(sector) {
+    this.sectoresService.TraerUnoSector(sector).subscribe(response => {
+      return response.idSector;
     },
       error => {
         console.error(error);
