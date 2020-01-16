@@ -1,33 +1,42 @@
 <br>
 <div class="col-md-12">
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
         <li class="nav-item">
-            <a class="nav-link active" id="pills-nueva-tab" data-toggle="pill" href="#pills-nueva" role="tab" aria-controls="pills-nueva" aria-selected="true">Nueva Maquina</a>
+            <a class="nav-link active" id="pills-listado-tab" data-toggle="pill" href="#pills-listado" 
+            role="tab" aria-controls="pills-listado" aria-selected="false">Vista Listado</a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" id="pills-nueva-tab" data-toggle="pill" href="#pills-nueva" role="tab" aria-controls="pills-nueva" aria-selected="false">Modificar Maquina</a>
+            <a class="nav-link" id="pills-cards-tab" data-toggle="pill" href="#pills-cards" 
+            role="tab" aria-controls="pills-card" aria-selected="false">Vista Cuadricula</a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link " id="pills-nueva-tab" data-toggle="pill" href="#pills-nueva" 
+            role="tab" aria-controls="pills-nueva" aria-selected="true">Nueva Maquina</a>
+        </li>
 
         <li class="nav-item">
-            <a class="nav-link " id="pills-listado-tab" data-toggle="pill" href="#pills-listado" role="tab" aria-controls="pills-listado" aria-selected="false">Vista Listado</a>
+            <a class="nav-link" id="pills-nueva-tab" data-toggle="pill" href="#pills-nueva" 
+            role="tab" aria-controls="pills-nueva" aria-selected="false">Modificar Maquina</a>
         </li>
+
         <li class="nav-item">
-            <a class="nav-link" id="pills-cards-tab" data-toggle="pill" href="#pills-cards" role="tab" aria-controls="pills-card" aria-selected="false">Vista Cuadricula</a>
+            <a class="nav-link" id="pills-buscar-tab" data-toggle="pill" href="#pills-buscar" 
+            role="tab" aria-controls="pills-buscar" aria-selected="false">Buscar Maquina</a>
         </li>
+
         <li class="nav-item">
-            <a class="nav-link" id="pills-buscar-tab" data-toggle="pill" href="#pills-buscar" role="tab" aria-controls="pills-buscar" aria-selected="false">Buscar Maquina</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" id="pills-home-tab" data-toggle="pill" routerLink="/home" role="tab" aria-controls="pills-home" aria-selected="false">Volver al Inicio</a>
+            <a class="nav-link" id="pills-home-tab" data-toggle="pill" routerLink="/home" 
+            role="tab" aria-controls="pills-home" aria-selected="false">Volver al Inicio</a>
         </li>
 
     </ul>
 
     <div class="tab-content" id="pills-tabContent">
 
-        <div class="tab-pane fade " id="pills-listado" role="tabpanel" aria-labelledby="pills-listado-tab">
+        <div class="tab-pane fade show active" id="pills-listado" role="tabpanel" aria-labelledby="pills-listado-tab">
             <app-listado [maquinasList]="maquinasList"></app-listado>
         </div>
 
@@ -35,7 +44,7 @@
             <app-card-listado></app-card-listado>
         </div>
 
-        <div class="tab-pane fade show active" id="pills-nueva" role="tabpanel" aria-labelledby="pills-nueva-tab">
+        <div class="tab-pane fade " id="pills-nueva" role="tabpanel" aria-labelledby="pills-nueva-tab">
             <app-nueva-maquina (altaNUevoArt)="cargarLista()"></app-nueva-maquina>
         </div>
 
